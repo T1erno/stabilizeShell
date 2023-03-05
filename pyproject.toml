@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "stabilizeshell"
+version = "1.0.0"
+description = "A small script to stabilize Unix reverse shells (fully interactive shell)."
+authors = ["T1erno"]
+license = "MIT License"
+readme = "README.md"
+include = ["./*.py"]
+packages = [{include = "./*.py"}]
+
+[tool.poetry.scripts]
+stabilizeShell = 'stabilizeShell:main'
+
+[tool.poetry.dependencies]
+python = "^3.9"
+argparse = "^1.4.0"
+rich = "^13.3.1"
+pynput = "^1.7.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
